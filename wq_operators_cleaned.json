@@ -1,0 +1,398 @@
+[
+  {
+    "operator_syntax": "abs(x)",
+    "level": "all",
+    "summary": "Returns the absolute value of a number, removing any negative sign.",
+    "detailed_explanation": "Returns the absolute value of a number, removing any negative sign."
+  },
+  {
+    "operator_syntax": "add(x, y, filter = false), x + y",
+    "level": "all",
+    "summary": "Adds two or more inputs element wise. Set filter=true to treat NaNs as 0 before summing.",
+    "detailed_explanation": "Adds two or more inputs element wise. Set filter=true to treat NaNs as 0 before summing."
+  },
+  {
+    "operator_syntax": "and(input1, input2)",
+    "level": "all",
+    "summary": "Returns 1 ('true') if both inputs are 1 ('true'). Otherwise, returns 0 ('false').",
+    "detailed_explanation": "Returns 1 ('true') if both inputs are 1 ('true'). Otherwise, returns 0 ('false')."
+  },
+  {
+    "operator_syntax": "bucket(rank(x), range=“0, 1, 0.1”, skipBoth=False, NaNGroup=False)\r\nor\r\nbucket(rank(x), buckets = “2,5,6,7,10”, skipBoth=False, NaNGroup=False)",
+    "level": "all",
+    "summary": "The bucket operator creates custom groups by dividing data into buckets (ranges) based on ranked values of any data field. These buckets can then be used with group operators like group_neutralize, gr",
+    "detailed_explanation": "The bucket operator creates custom groups by dividing data into buckets (ranges) based on ranked values of any data field. These buckets can then be used with group operators like group_neutralize, group_rank, group_zscore etc."
+  },
+  {
+    "operator_syntax": "days_from_last_change(x)",
+    "level": "all",
+    "summary": "Calculates the number of days since the last change in the value of a given variable.",
+    "detailed_explanation": "Calculates the number of days since the last change in the value of a given variable."
+  },
+  {
+    "operator_syntax": "densify(x)",
+    "level": "all",
+    "summary": "Converts a grouping field of many buckets into lesser number of only available buckets so as to make working with grouping fields computationally efficient",
+    "detailed_explanation": "Converts a grouping field of many buckets into lesser number of only available buckets so as to make working with grouping fields computationally efficient"
+  },
+  {
+    "operator_syntax": "divide(x, y), x / y",
+    "level": "all",
+    "summary": "x / y",
+    "detailed_explanation": "x / y"
+  },
+  {
+    "operator_syntax": "group_backfill(x, group, d, std = 4.0)",
+    "level": "all",
+    "summary": "Fills missing (NaN) values for instruments within the same group by calculating a winsorized mean of all non-NaN values over the past d days. The winsorized mean is computed by trimming extreme values",
+    "detailed_explanation": "Fills missing (NaN) values for instruments within the same group by calculating a winsorized mean of all non-NaN values over the past d days. The winsorized mean is computed by trimming extreme values based on a specified standard deviation multiplier (std, default 4.0)."
+  },
+  {
+    "operator_syntax": "group_mean(x, weight, group)",
+    "level": "all",
+    "summary": "Calculates the harmonic mean of a data field within each specified group.",
+    "detailed_explanation": "Calculates the harmonic mean of a data field within each specified group."
+  },
+  {
+    "operator_syntax": "group_neutralize(x, group)",
+    "level": "all",
+    "summary": "Neutralizes Alpha values within each specified group by subtracting the group mean from each value. Groups can be industry, sector, country, or any custom grouping.",
+    "detailed_explanation": "Neutralizes Alpha values within each specified group by subtracting the group mean from each value. Groups can be industry, sector, country, or any custom grouping."
+  },
+  {
+    "operator_syntax": "group_rank(x, group)",
+    "level": "all",
+    "summary": "Ranks each element within its group based on the input field, assigning a value between 0.0 and 1.0. This helps compare items within the same group, such as stocks in the same industry.",
+    "detailed_explanation": "Ranks each element within its group based on the input field, assigning a value between 0.0 and 1.0. This helps compare items within the same group, such as stocks in the same industry."
+  },
+  {
+    "operator_syntax": "group_scale(x, group)",
+    "level": "all",
+    "summary": "Normalizes values within each group to a range between 0 and 1, making data comparable across different groups.",
+    "detailed_explanation": "Normalizes values within each group to a range between 0 and 1, making data comparable across different groups."
+  },
+  {
+    "operator_syntax": "group_zscore(x, group)",
+    "level": "all",
+    "summary": "Calculates the Z-score of each value within its group, showing how far each value is from the group mean in terms of standard deviations. Useful for comparing values relative to their group.",
+    "detailed_explanation": "Calculates the Z-score of each value within its group, showing how far each value is from the group mean in terms of standard deviations. Useful for comparing values relative to their group."
+  },
+  {
+    "operator_syntax": "hump(x, hump = 0.01)",
+    "level": "all",
+    "summary": "Limits amount and magnitude of changes in input (thus reducing turnover)",
+    "detailed_explanation": "Limits amount and magnitude of changes in input (thus reducing turnover)"
+  },
+  {
+    "operator_syntax": "if_else(input1, input2, input 3)",
+    "level": "all",
+    "summary": "The if_else operator returns one of two values based on a condition. If the condition is true, it returns the first value; if false, it returns the second value.",
+    "detailed_explanation": "The if_else operator returns one of two values based on a condition. If the condition is true, it returns the first value; if false, it returns the second value."
+  },
+  {
+    "operator_syntax": "input1 < input2",
+    "level": "all",
+    "summary": "Returns 1 ('true') if input1 is a smaller than input2. Otherwise, returns 0 ('false').",
+    "detailed_explanation": "Returns 1 ('true') if input1 is a smaller than input2. Otherwise, returns 0 ('false')."
+  },
+  {
+    "operator_syntax": "input1 <= input2",
+    "level": "all",
+    "summary": "Returns 1 ('true') if input1 is a smaller or the same as input2. Otherwise, returns 0 ('false').",
+    "detailed_explanation": "Returns 1 ('true') if input1 is a smaller or the same as input2. Otherwise, returns 0 ('false')."
+  },
+  {
+    "operator_syntax": "input1 == input2",
+    "level": "all",
+    "summary": "Returns 1 ('true') if input1 and input2 are the same. Otherwise, returns 0 ('false').",
+    "detailed_explanation": "Returns 1 ('true') if input1 and input2 are the same. Otherwise, returns 0 ('false')."
+  },
+  {
+    "operator_syntax": "input1 > input2",
+    "level": "all",
+    "summary": "Returns 1 ('true') if input1 is a larger than input2. Otherwise, returns 0 ('false').",
+    "detailed_explanation": "Returns 1 ('true') if input1 is a larger than input2. Otherwise, returns 0 ('false')."
+  },
+  {
+    "operator_syntax": "input1 >= input2",
+    "level": "all",
+    "summary": "Returns 1 ('true') if input1 is a larger or the same as input2. Otherwise, returns 0 ('false').",
+    "detailed_explanation": "Returns 1 ('true') if input1 is a larger or the same as input2. Otherwise, returns 0 ('false')."
+  },
+  {
+    "operator_syntax": "input1!= input2",
+    "level": "all",
+    "summary": "Returns 1 ('true') if input1 and input2 are different numbers. Otherwise, returns 0 ('false').",
+    "detailed_explanation": "Returns 1 ('true') if input1 and input2 are different numbers. Otherwise, returns 0 ('false')."
+  },
+  {
+    "operator_syntax": "inverse(x)",
+    "level": "all",
+    "summary": "1 / x",
+    "detailed_explanation": "1 / x"
+  },
+  {
+    "operator_syntax": "is_nan(input)",
+    "level": "all",
+    "summary": "If (input == NaN) return 1 else return 0",
+    "detailed_explanation": "If (input == NaN) return 1 else return 0"
+  },
+  {
+    "operator_syntax": "kth_element(x, d, k, ignore=“NaN”)",
+    "level": "all",
+    "summary": "Returns the K-th value from a time series by looking back over a specified number of (‘d’) days, with the option to ignore certain values. Commonly used for backfilling missing data.",
+    "detailed_explanation": "Returns the K-th value from a time series by looking back over a specified number of (‘d’) days, with the option to ignore certain values. Commonly used for backfilling missing data."
+  },
+  {
+    "operator_syntax": "last_diff_value(x, d)",
+    "level": "all",
+    "summary": "Returns the most recent value of x from the past d days that is different from the current value of x.",
+    "detailed_explanation": "Returns the most recent value of x from the past d days that is different from the current value of x."
+  },
+  {
+    "operator_syntax": "log(x)",
+    "level": "all",
+    "summary": "Calculates the natural logarithm of the input value. Commonly used to transform data that has positive values.",
+    "detailed_explanation": "Calculates the natural logarithm of the input value. Commonly used to transform data that has positive values."
+  },
+  {
+    "operator_syntax": "max(x, y, ..)",
+    "level": "all",
+    "summary": "Maximum value of all inputs. At least 2 inputs are required",
+    "detailed_explanation": "Maximum value of all inputs. At least 2 inputs are required"
+  },
+  {
+    "operator_syntax": "min(x, y ..)",
+    "level": "all",
+    "summary": "Minimum value of all inputs. At least 2 inputs are required",
+    "detailed_explanation": "Minimum value of all inputs. At least 2 inputs are required"
+  },
+  {
+    "operator_syntax": "multiply(x ,y, ... , filter=false), x * y",
+    "level": "all",
+    "summary": "Multiplies two or more inputs element wise. Set filter=true to treat NaNs as 0 before multiplication",
+    "detailed_explanation": "Multiplies two or more inputs element wise. Set filter=true to treat NaNs as 0 before multiplication"
+  },
+  {
+    "operator_syntax": "normalize(x, useStd = false, limit = 0.0)",
+    "level": "all",
+    "summary": "Centers a daily cross section by subtracting the market mean; optionally divide by the cross sectional standard deviation and clamp the result to [?limit, +limit]. NaNs are ignored in mean/std.",
+    "detailed_explanation": "Centers a daily cross section by subtracting the market mean; optionally divide by the cross sectional standard deviation and clamp the result to [?limit, +limit]. NaNs are ignored in mean/std."
+  },
+  {
+    "operator_syntax": "not(x)",
+    "level": "all",
+    "summary": "Returns the logical negation of x. Returns 0 when x is 1 (‘true’) and 1 when x is 0 (‘false’).",
+    "detailed_explanation": "Returns the logical negation of x. Returns 0 when x is 1 (‘true’) and 1 when x is 0 (‘false’)."
+  },
+  {
+    "operator_syntax": "or(input1, input2)",
+    "level": "all",
+    "summary": "Returns 1 if either input is true (either input1 or input2 has a value of 1), otherwise it returns 0.",
+    "detailed_explanation": "Returns 1 if either input is true (either input1 or input2 has a value of 1), otherwise it returns 0."
+  },
+  {
+    "operator_syntax": "power(x, y)",
+    "level": "all",
+    "summary": "x ^ y",
+    "detailed_explanation": "x ^ y"
+  },
+  {
+    "operator_syntax": "quantile(x, driver = gaussian, sigma = 1.0)",
+    "level": "all",
+    "summary": "Ranks and shifts a vector of Alpha values, then applies a chosen statistical distribution (gaussian, cauchy, or uniform) to reduce outliers. The sigma parameter controls the scale of the output.",
+    "detailed_explanation": "Ranks and shifts a vector of Alpha values, then applies a chosen statistical distribution (gaussian, cauchy, or uniform) to reduce outliers. The sigma parameter controls the scale of the output."
+  },
+  {
+    "operator_syntax": "rank(x, rate=2)",
+    "level": "all",
+    "summary": "Ranks the values of the input x among all instruments, returning numbers evenly spaced between 0.0 and 1.0. Useful for normalizing data and reducing the impact of outliers.",
+    "detailed_explanation": "Ranks the values of the input x among all instruments, returning numbers evenly spaced between 0.0 and 1.0. Useful for normalizing data and reducing the impact of outliers."
+  },
+  {
+    "operator_syntax": "reverse(x)",
+    "level": "all",
+    "summary": " - x",
+    "detailed_explanation": " - x"
+  },
+  {
+    "operator_syntax": "scale(x, scale=1, longscale=1, shortscale=1)",
+    "level": "all",
+    "summary": "Scales the input so that the sum of absolute values across all instruments equals a specified book size. Allows separate scaling for long and short positions using optional parameters.",
+    "detailed_explanation": "Scales the input so that the sum of absolute values across all instruments equals a specified book size. Allows separate scaling for long and short positions using optional parameters."
+  },
+  {
+    "operator_syntax": "sign(x)",
+    "level": "all",
+    "summary": "Returns the sign of a number: +1 for positive, -1 for negative, and 0 for zero. If the input is NaN, returns NaN.\r\n\r\nInput: Value of 7 instruments at day t: (2, -3, 5, 6, 3, NaN, -10)\r\nOutput: (1, -1,",
+    "detailed_explanation": "Returns the sign of a number: +1 for positive, -1 for negative, and 0 for zero. If the input is NaN, returns NaN.\r\n\r\nInput: Value of 7 instruments at day t: (2, -3, 5, 6, 3, NaN, -10)\r\nOutput: (1, -1, 1, 1, 1, NaN, -1)"
+  },
+  {
+    "operator_syntax": "signed_power(x, y)",
+    "level": "all",
+    "summary": "x raised to the power of y such that final result preserves sign of x",
+    "detailed_explanation": "x raised to the power of y such that final result preserves sign of x"
+  },
+  {
+    "operator_syntax": "sqrt(x)",
+    "level": "all",
+    "summary": "Returns the non negative square root of x. Equivalent to power(x, 0.5); for signed roots use signed_power(x, 0.5).",
+    "detailed_explanation": "Returns the non negative square root of x. Equivalent to power(x, 0.5); for signed roots use signed_power(x, 0.5)."
+  },
+  {
+    "operator_syntax": "subtract(x, y, filter=false), x - y",
+    "level": "all",
+    "summary": "Subtracts inputs left to right: x ? y ? … Supports two or more inputs. Set filter=true to treat NaNs as 0 before subtraction.",
+    "detailed_explanation": "Subtracts inputs left to right: x ? y ? … Supports two or more inputs. Set filter=true to treat NaNs as 0 before subtraction."
+  },
+  {
+    "operator_syntax": "trade_when(x, y, z)",
+    "level": "all",
+    "summary": "The trade_when operator changes Alpha values only when a specific condition is met, keeps previous values otherwise, and can close positions by assigning NaN under an exit condition. It is useful for ",
+    "detailed_explanation": "The trade_when operator changes Alpha values only when a specific condition is met, keeps previous values otherwise, and can close positions by assigning NaN under an exit condition. It is useful for reducing turnover and controlling when trades are executed."
+  },
+  {
+    "operator_syntax": "ts_arg_max(x, d)",
+    "level": "all",
+    "summary": "Returns the number of days since the maximum value occurred in the last d days of a time series. If today's value is the maximum, returns 0; if it was yesterday, returns 1, and so on.",
+    "detailed_explanation": "Returns the number of days since the maximum value occurred in the last d days of a time series. If today's value is the maximum, returns 0; if it was yesterday, returns 1, and so on."
+  },
+  {
+    "operator_syntax": "ts_arg_min(x, d)",
+    "level": "all",
+    "summary": "Returns the number of days since the minimum value occurred in a time series over the past d days. If today's value is the minimum, returns 0; if it was yesterday, returns 1, and so on.",
+    "detailed_explanation": "Returns the number of days since the minimum value occurred in a time series over the past d days. If today's value is the minimum, returns 0; if it was yesterday, returns 1, and so on."
+  },
+  {
+    "operator_syntax": "ts_av_diff(x, d)",
+    "level": "all",
+    "summary": "Calculates the difference between a value and its mean over a specified period, ignoring NaN values in the mean calculation. In short, it returns x – ts_mean(x, d) with NaNs ignored.",
+    "detailed_explanation": "Calculates the difference between a value and its mean over a specified period, ignoring NaN values in the mean calculation. In short, it returns x – ts_mean(x, d) with NaNs ignored."
+  },
+  {
+    "operator_syntax": "ts_backfill(x,lookback = d, k=1)",
+    "level": "all",
+    "summary": "Replaces missing (NaN) values in a time series with the most recent valid value from a specified lookback window, improving data coverage and reducing risk from missing data.",
+    "detailed_explanation": "Replaces missing (NaN) values in a time series with the most recent valid value from a specified lookback window, improving data coverage and reducing risk from missing data."
+  },
+  {
+    "operator_syntax": "ts_corr(x, y, d)",
+    "level": "all",
+    "summary": "Calculates the Pearson correlation between two variables, x and y, over the past d days, showing how closely they move together.",
+    "detailed_explanation": "Calculates the Pearson correlation between two variables, x and y, over the past d days, showing how closely they move together."
+  },
+  {
+    "operator_syntax": "ts_count_nans(x ,d)",
+    "level": "all",
+    "summary": "Counts the number of missing (NaN) values in a data series over a specified number of days.",
+    "detailed_explanation": "Counts the number of missing (NaN) values in a data series over a specified number of days."
+  },
+  {
+    "operator_syntax": "ts_covariance(y, x, d)",
+    "level": "all",
+    "summary": "Calculates the covariance between two time-series variables, y and x, over the past d days. Useful for measuring how two variables move together within a specified historical window.",
+    "detailed_explanation": "Calculates the covariance between two time-series variables, y and x, over the past d days. Useful for measuring how two variables move together within a specified historical window."
+  },
+  {
+    "operator_syntax": "ts_decay_linear(x, d, dense = false)",
+    "level": "all",
+    "summary": "Applies a linear decay to time-series data over a set number of days, smoothing the data by averaging recent values and reducing the impact of older or missing data.",
+    "detailed_explanation": "Applies a linear decay to time-series data over a set number of days, smoothing the data by averaging recent values and reducing the impact of older or missing data."
+  },
+  {
+    "operator_syntax": "ts_delay(x, d)",
+    "level": "all",
+    "summary": "Returns the value of a variable x from d days ago. Use this operator to access historical data points by specifying the desired time lag in days.",
+    "detailed_explanation": "Returns the value of a variable x from d days ago. Use this operator to access historical data points by specifying the desired time lag in days."
+  },
+  {
+    "operator_syntax": "ts_delta(x, d)",
+    "level": "all",
+    "summary": "Calculates the difference between a value and its delayed version over a specified period. Useful for measuring changes or momentum in time-series data.",
+    "detailed_explanation": "Calculates the difference between a value and its delayed version over a specified period. Useful for measuring changes or momentum in time-series data."
+  },
+  {
+    "operator_syntax": "ts_mean(x, d)",
+    "level": "all",
+    "summary": "Calculates the simple average (mean) value of a variable x over the past d days.",
+    "detailed_explanation": "Calculates the simple average (mean) value of a variable x over the past d days."
+  },
+  {
+    "operator_syntax": "ts_product(x, d)",
+    "level": "all",
+    "summary": "Returns the product of the values of x over the past d days. Useful for calculating geometric means and compounding returns or growth rates.",
+    "detailed_explanation": "Returns the product of the values of x over the past d days. Useful for calculating geometric means and compounding returns or growth rates."
+  },
+  {
+    "operator_syntax": "ts_quantile(x,d, driver=\"gaussian\" )",
+    "level": "all",
+    "summary": "Calculates the ts_rank of the input and transforms it using the inverse cumulative distribution function (quantile function) of a specified probability distribution (default: Gaussian/normal). This he",
+    "detailed_explanation": "Calculates the ts_rank of the input and transforms it using the inverse cumulative distribution function (quantile function) of a specified probability distribution (default: Gaussian/normal). This helps to normalize or reshape the distribution of your data over a rolling window."
+  },
+  {
+    "operator_syntax": "ts_rank(x, d, constant = 0)",
+    "level": "all",
+    "summary": "Ranks the value of a variable for each instrument over a specified number of past days, returning the rank of the current value (optionally adjusted by a constant). Useful for normalizing time-series ",
+    "detailed_explanation": "Ranks the value of a variable for each instrument over a specified number of past days, returning the rank of the current value (optionally adjusted by a constant). Useful for normalizing time-series data and highlighting relative performance over time."
+  },
+  {
+    "operator_syntax": "ts_regression(y, x, d, lag = 0, rettype = 0)",
+    "level": "all",
+    "summary": "Returns various parameters related to regression function",
+    "detailed_explanation": "Returns various parameters related to regression function"
+  },
+  {
+    "operator_syntax": "ts_scale(x, d, constant = 0)",
+    "level": "all",
+    "summary": "Scales a time series to a 0–1 range based on its minimum and maximum values over a specified period, with an optional constant shift.",
+    "detailed_explanation": "Scales a time series to a 0–1 range based on its minimum and maximum values over a specified period, with an optional constant shift."
+  },
+  {
+    "operator_syntax": "ts_std_dev(x, d)",
+    "level": "all",
+    "summary": "Calculates the standard deviation of a data series x over the past d days, measuring how much the values deviate from their mean during that period.",
+    "detailed_explanation": "Calculates the standard deviation of a data series x over the past d days, measuring how much the values deviate from their mean during that period."
+  },
+  {
+    "operator_syntax": "ts_step(1)",
+    "level": "all",
+    "summary": "Returns a counter of days, incrementing by one each day.",
+    "detailed_explanation": "Returns a counter of days, incrementing by one each day."
+  },
+  {
+    "operator_syntax": "ts_sum(x, d)",
+    "level": "all",
+    "summary": "Sum values of x for the past d days.",
+    "detailed_explanation": "Sum values of x for the past d days."
+  },
+  {
+    "operator_syntax": "ts_zscore(x, d)",
+    "level": "all",
+    "summary": "Calculates the Z-score of a time series, showing how far today's value is from the recent average, measured in standard deviations. Useful for standardizing and comparing values over time.",
+    "detailed_explanation": "Calculates the Z-score of a time series, showing how far today's value is from the recent average, measured in standard deviations. Useful for standardizing and comparing values over time."
+  },
+  {
+    "operator_syntax": "vec_avg(x)",
+    "level": "all",
+    "summary": "Calculates the mean (average) of all elements in a vector field for each instrument and date, converting vector data to a single matrix value.",
+    "detailed_explanation": "Calculates the mean (average) of all elements in a vector field for each instrument and date, converting vector data to a single matrix value."
+  },
+  {
+    "operator_syntax": "vec_sum(x)",
+    "level": "all",
+    "summary": "Calculates the sum of all values in a vector field.",
+    "detailed_explanation": "Calculates the sum of all values in a vector field."
+  },
+  {
+    "operator_syntax": "winsorize(x, std=4)",
+    "level": "all",
+    "summary": "Winsorize limits values in a data to within a specified number of standard deviations from the mean, reducing the impact of extreme outliers.",
+    "detailed_explanation": "Winsorize limits values in a data to within a specified number of standard deviations from the mean, reducing the impact of extreme outliers."
+  },
+  {
+    "operator_syntax": "zscore(x)",
+    "level": "all",
+    "summary": "Z-score is a numerical measurement that describes a value's relationship to the mean of a group of values. Z-score is measured in terms of standard deviations from the mean",
+    "detailed_explanation": "Z-score is a numerical measurement that describes a value's relationship to the mean of a group of values. Z-score is measured in terms of standard deviations from the mean"
+  }
+]

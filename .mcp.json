@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wq-brain": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "wq_mcp"]
+    }
+  }
+}
