@@ -14,3 +14,5 @@ datafields_cache/
 mcp_server.log
 queue_state.json
 *.pyc
+
+.claude/
